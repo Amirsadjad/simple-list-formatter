@@ -1,7 +1,15 @@
 {
     "name": "amirsadjad/simple-list-formatter",
     "description": "Simple list formatter for UI development ease of use.",
+    "homepage": "https://github.com/Amirsadjad/simple-list-formatter",
+    "type": "library",
+    "license": "MIT",
     "autoload": {
+        "psr-4": {
+            "Amirsadjad\\SimpleListFormatter\\": "src/"
+        }
+    },
+    "autoload-dev": {
         "psr-4": {
             "Amirsadjad\\SimpleListFormatter\\": "src/"
         }
@@ -12,5 +20,17 @@
             "email": "amirsadjad@gmail.com"
         }
     ],
-    "require": {}
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Amirsadjad\\SimpleListFormatter\\SimpleListFormatterServiceProvider"
+            ],
+            "aliases": {
+                "SimpleList": "Amirsadjad\\SimpleListFormatter\\Facades\\SimpleList"
+            }
+        }
+    }
 }
