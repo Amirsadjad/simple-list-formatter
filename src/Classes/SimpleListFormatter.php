@@ -34,7 +34,7 @@ class SimpleListFormatter
      */
     public function search($query)
     {
-        $this->query = $query;
+        $this->query = $query = str($query)->lower();
 
         $this->data = $this->data->filter(function ($datum) use ($query) {
             return collect($datum)->search(function ($item, $column) use ($query) {
