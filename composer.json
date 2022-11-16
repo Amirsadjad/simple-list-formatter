@@ -1,0 +1,16 @@
+{
+    "name": "amirsadjad/simple-list-formatter",
+    "description": "Simple list formatter for UI development ease of use.",
+    "autoload": {
+        "psr-4": {
+            "Amirsadjad\\SimpleListFormatter\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amirsadjad KhL",
+            "email": "amirsadjad@gmail.com"
+        }
+    ],
+    "require": {}
+}
