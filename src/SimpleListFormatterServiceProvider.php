@@ -11,7 +11,11 @@ class SimpleListFormatterServiceProvider extends ServiceProvider
     {
         $this->loadRoutesFrom(__DIR__.'/Routes/web.php');
         $this->loadMigrationsFrom(__DIR__.'/Database/Migrations');
-        $this->publishes([__DIR__.'/Config' => config_path('/'), 'simple-list-formatter-config']);
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/Config' => config_path('/'),
+            ], 'simple-list-formatter-config');
+        }
     }
 
     public function register()
