@@ -41,6 +41,24 @@ $list->generate()
 To interacting with presets table you can either use the Model class
 ```php
 SimpleListPresets::find($name);
+
+// preset data needs to be formatted like this
+$preset = [
+  'columns' => [
+    'column_name' => [
+      'data_type' => 'string',
+      'is_sortable' => 'bool',
+      'is_searchable' => 'bool',
+      'width' => 'int',
+      'title' => 'string',
+      'metadata' => 'array'
+    ],
+    ...
+    ..
+    .
+  ],
+  'page_size' => 'int',
+];
 ```
 
 Or you can use the built in APIs:
